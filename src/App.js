@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import DadesObertes from './components/DadesObertes'
+
 import './App.css';
 
 function getNum() {
@@ -12,6 +14,7 @@ function validator(a, b) {
 function App() {
   const [count, setCount] = useState(0)
   const [great, setGreat] = useState(0)
+
   const a = getNum()
   const b = getNum()
 
@@ -42,9 +45,10 @@ function App() {
             {a} x {b} = 
             <input className="focus:outline-none w-36 bg-blue-900/5" id="result" onKeyDown={handleKey}></input> 
           </div>
+          <DadesObertes />
         </div>
     </div>
-  );
+  )
 }
 
 export default App;
